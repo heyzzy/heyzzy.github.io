@@ -152,29 +152,27 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Linux作为无线网卡共享网络给有线网口的配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Docker学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE/">Linux作为无线网卡共享网络给有线网口的配置</a>
+      <a class="article-title" href="/2024/01/05/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
     </h1>
   
 
         
-        <a href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2024-01-03T07:30:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-03</time>
+        <a href="/2024/01/05/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2024-01-05T02:01:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="准备工具"><a href="#准备工具" class="headerlink" title="##准备工具"></a>##准备工具</h2><p>Linux系统 —（笔记中使用Ubuntu22.04.3 LTS）<br>brctl工具 — (用来创建网桥的集成化工具)<br>ifconfig工具 — (用来配置网卡的地址)<br>dnsmasq工具 — (作为DHCP服务)</p>
-<h2 id="桥配置步骤"><a href="#桥配置步骤" class="headerlink" title="##桥配置步骤"></a>##桥配置步骤</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install brctl  </span><br><span class="line">ifconfig wlan0 up  </span><br><span class="line">ifconfig eth0 up  </span><br><span class="line">brctl addbr br0  </span><br><span class="line">ifconfig br0 192.168.50.1 netmask255.255.255.0</span><br><span class="line">brctl stp br0 off</span><br><span class="line">brctl addif eth0  </span><br><span class="line">brctl addif wlan0  </span><br><span class="line">ifconfig br0 up  </span><br></pre></td></tr></table></figure>
-
+        
       
 
       
@@ -186,7 +184,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE/">展开全文 >></a>
+          <a class="article-more-a" href="/2024/01/05/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
         </p>
       
 
@@ -216,19 +214,83 @@
 
 
   
-    <article id="post-关于MarkDown的学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Linux作为无线网卡共享网络给有线网口的配置（待更新）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">关于MarkDown的学习笔记</a>
+      <a class="article-title" href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%88%E5%BE%85%E6%9B%B4%E6%96%B0%EF%BC%89/">Linux作为无线网卡共享网络给有线网口的配置</a>
     </h1>
   
 
         
-        <a href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <a href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%88%E5%BE%85%E6%9B%B4%E6%96%B0%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2024-01-03T07:30:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="准备工具"><a href="#准备工具" class="headerlink" title="##准备工具"></a>##准备工具</h2><p>Linux系统 —（笔记中使用Ubuntu22.04.3 LTS）<br>brctl工具 — (用来创建网桥的集成化工具)<br>ifconfig工具 — (用来配置网卡的地址)<br>dnsmasq工具 — (作为DHCP服务)</p>
+<h2 id="桥配置步骤"><a href="#桥配置步骤" class="headerlink" title="##桥配置步骤"></a>##桥配置步骤</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install brctl  </span><br><span class="line">ifconfig wlan0 up  </span><br><span class="line">ifconfig eth0 up  </span><br><span class="line">brctl addbr br0  </span><br><span class="line">ifconfig br0 192.168.50.1 netmask255.255.255.0</span><br><span class="line">brctl stp br0 off</span><br><span class="line">brctl addif eth0  </span><br><span class="line">brctl addif wlan0  </span><br><span class="line">ifconfig br0 up  </span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%88%E5%BE%85%E6%9B%B4%E6%96%B0%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-关于MarkDown的学习笔记（待更新）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%BE%85%E6%9B%B4%E6%96%B0%EF%BC%89/">关于MarkDown的学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%BE%85%E6%9B%B4%E6%96%B0%EF%BC%89/" class="archive-article-date">
   	<time datetime="2024-01-03T07:28:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-03</time>
 </a>
         
@@ -256,7 +318,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+          <a class="article-more-a" href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%BE%85%E6%9B%B4%E6%96%B0%EF%BC%89/">展开全文 >></a>
         </p>
       
 
@@ -293,7 +355,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/01/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
+      <a class="article-title" href="/2024/01/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">写给未来的自己</a>
     </h1>
   
 
@@ -306,14 +368,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##第一章</p>
-<p>内容</p>
-<hr>
-<p>##第二章</p>
-<p>内容</p>
-<hr>
-<p>##参考文献</p>
-<p>heyzzy.github.io</p>
+        <h2 id="我是小白"><a href="#我是小白" class="headerlink" title="##我是小白"></a>##我是小白</h2><p>初来乍到，请多指教<br>小生不才，请多包涵<br>如有误点，请您指点<br>向您致敬，向您比心  </p>
+<p>从专科毕业起点不高，培训机构学了互联网构架师，可惜学艺不精，也可能因为目的性太强，半途而废<br>中间一直从事弱电相关工作，无奈钱少事儿多，打算给自己一个平台期好好沉淀，于是在外企从事了桌面运维，桌面运维期间考取了HCIP Datacom 数通的认证，算是对<strong>校园网VLAN、STP、OSPF、链路聚合、NAT等，以及广域网MPLS、IS-IS、BGP、堆叠等</strong>，有了一个大概的了解。<br>目前还在<strong>学习Linux、Docker、K8S、ESP32单片机开发</strong>（纯个人兴趣，现在的程度就是花式点灯，玩玩OLED，温湿度传感器舵机之类的，用的都是开源的Library，很初级）。<br>现在2024年才准备踏入互联网的圈子，真的是有点滞后了，但是人生路还长，对于现在的自己来说，脚踏实地的打好基础才是最重要的，要相信未来可期，未来只会比现在更好，奥里给.</p>
 
       
 
