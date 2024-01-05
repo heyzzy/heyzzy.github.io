@@ -5,18 +5,18 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <link rel="dns-prefetch" href="https://heyzzy.github.io">
+  <title>Hey This is Zzy.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:title" content="Hey This is Zzy.">
+<meta property="og:url" content="https://heyzzy.github.io/index.html">
+<meta property="og:site_name" content="Hey This is Zzy.">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Zaine.John">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Hey This is Zzy." type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -151,6 +151,140 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Linux作为无线网卡共享网络给有线网口的配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE/">Linux作为无线网卡共享网络给有线网口的配置</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2024-01-03T07:30:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="准备工具"><a href="#准备工具" class="headerlink" title="##准备工具"></a>##准备工具</h2><p>Linux系统 —（笔记中使用Ubuntu22.04.3 LTS）<br>brctl工具 — (用来创建网桥的集成化工具)<br>ifconfig工具 — (用来配置网卡的地址)<br>dnsmasq工具 — (作为DHCP服务)</p>
+<h2 id="桥配置步骤"><a href="#桥配置步骤" class="headerlink" title="##桥配置步骤"></a>##桥配置步骤</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install brctl  </span><br><span class="line">ifconfig wlan0 up  </span><br><span class="line">ifconfig eth0 up  </span><br><span class="line">brctl addbr br0  </span><br><span class="line">ifconfig br0 192.168.50.1 netmask255.255.255.0</span><br><span class="line">brctl stp br0 off</span><br><span class="line">brctl addif eth0  </span><br><span class="line">brctl addif wlan0  </span><br><span class="line">ifconfig br0 up  </span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/03/Linux%E4%BD%9C%E4%B8%BA%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%BB%99%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8F%A3%E7%9A%84%E9%85%8D%E7%BD%AE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-关于MarkDown的学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">关于MarkDown的学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2024-01-03T07:28:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a><em><strong>标题</strong></em></h2><p>#一级标题<br>##二级标题<br>###三级标题<br>####四级标题<br>#####五级标题  </p>
+<h2 id="段落格式"><a href="#段落格式" class="headerlink" title="段落格式  "></a><em><strong>段落格式</strong></em>  </h2><p>段落换行：在文本后加两个空格</p>
+<p>也可以在两行间使用一个空行</p>
+<p>来重新开始一个段落 </p>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体  "></a><em><strong>字体</strong></em>  </h2><h2 id="一个星号-下划线是斜体-两个星号-下划线是粗体-三个星号-下划线是粗斜体-分割线"><a href="#一个星号-下划线是斜体-两个星号-下划线是粗体-三个星号-下划线是粗斜体-分割线" class="headerlink" title="一个星号&#x2F;下划线是斜体:两个星号&#x2F;下划线是粗体:三个星号&#x2F;下划线是粗斜体:分割线"></a>一个星号&#x2F;下划线是斜体:<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*sample*  </span><br><span class="line">_sample_</span><br></pre></td></tr></table></figure><br>两个星号&#x2F;下划线是粗体:<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**sample**</span><br><span class="line">__sample__</span><br></pre></td></tr></table></figure><br>三个星号&#x2F;下划线是粗斜体:<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">***sample***  </span><br><span class="line">___sample___</span><br></pre></td></tr></table></figure><br><em><strong>分割线</strong></em></h2><h2 id="可以用三个以上的星号或者段横杠表示。删除线"><a href="#可以用三个以上的星号或者段横杠表示。删除线" class="headerlink" title="可以用三个以上的星号或者段横杠表示。删除线"></a>可以用三个以上的星号或者段横杠表示。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">----------</span><br></pre></td></tr></table></figure><br><em><strong>删除线</strong></em></h2><p>文本前后加两个波浪线表示“~~”  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~sample~~</span><br></pre></td></tr></table></figure>
+<p>like this <del>sample</del></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/03/%E5%85%B3%E4%BA%8EMarkDown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -307,7 +441,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2024 John Doe
+    		&copy; 2024 Zaine.John
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
